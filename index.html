@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/index.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="swiper4/swiper-4.3.5.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/better-scroll.js"></script>
+    <script src="js/flexible.js"></script>
+    <script src="js/zepto.js"></script>
+    <script src="iconfont/iconfont.js"></script>
+    <script src="swiper4/swiper-4.3.5.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="bst">
+                <span class="active">推荐</span>
+                <span>女装</span>
+                <span>美食</span>
+                <span>居家</span>
+                <span>美妆个户</span>
+                <span>男装</span>
+                <span>内衣</span>
+                <span>鞋</span>
+                <span>推荐</span>
+                <span>女装</span>
+                <span>美食</span>
+                <span>居家</span>
+            </div>
+        </header>
+        <section>
+            <div class="bancon">
+                <span>热销爆款</span>
+                <span>共234款</span>
+            </div>
+            <div class="banner">
+                <div class="swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <img src="images/banner.png" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="images/banner2.png" alt="">
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
+            <div class="content">
+                <dl>
+                    <dt><img src="images/pic1.png"></dt>
+                    <dd>苹果数据线</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/pic2.png"></dt>
+                    <dd>苹果数据线</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/pic1.png"></dt>
+                    <dd>苹果数据线</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/pic2.png"></dt>
+                    <dd>苹果数据线</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/pic1.png"></dt>
+                    <dd>苹果数据线</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/pic2.png"></dt>
+                    <dd>苹果数据线</dd>
+                </dl>
+            </div>
+        </section>
+        <footer>
+            <dl>
+                <dt class="iconfont">&#xe711;</dt>
+                <dd>首页</dd>
+            </dl>
+            <dl>
+                <dt class="iconfont">&#xe633;</dt>
+                <dd>分类</dd>
+            </dl>
+            <dl>
+                <dt class="iconfont">&#xe71a;</dt>
+                <dd>品牌特惠</dd>
+            </dl>
+            <dl class="act">
+                <dt class="iconfont">&#xe75f;</dt>
+                <dd>5元包邮</dd>
+            </dl>
+            <dl>
+                <dt class="iconfont">&#xe725;</dt>
+                <dd>我的</dd>
+            </dl>
+        </footer>
+    </div>
+
+</body>
+<script>
+    var Bscroll = new BScroll('header', {
+        scrollX: true,
+        click: true
+    });
+    var mySwiper = new Swiper('.swiper-container', {
+        slidePerview: 1,
+        autoplay: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        }
+    });
+    $('.bst span').on('click', function() {
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+    $('footer dl').on('click', function() {
+        $(this).addClass('act').siblings().removeClass('act');
+    })
+</script>
+
+</html>
